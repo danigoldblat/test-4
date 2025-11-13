@@ -7,6 +7,11 @@ def basic_endpoints():
    return{"msg":"hi from test"}
 
 
+@app.get("/test/{name}")
+def test(name:str):
+   return {"name":name}
+   
+@app.get("/fence/encrypt{text}")
+def Fence_cipher_endpoints(text:str):
+   return {"encrypted_text":text }   
 
-# if __name__ == "__main__":
-#     uvicorn.run(app, host="localhost", port=8000)
